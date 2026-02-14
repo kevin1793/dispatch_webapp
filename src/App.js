@@ -6,6 +6,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
 // import DispatcherDashboard from "./pages/DispatcherDashboard";
 // import ContractorDashboard from "./pages/ContractorDashboard";
+import AdminDemoDashboard from "./pages/AdminDemoDashboard";
+import DispatcherDemoDashboard from "./pages/DispatcherDemoDashboard";
+import FinanceDemoDashboard from "./pages/FinanceDemoDashboard";
 import CreateJob from "./pages/CreateJob";
 
 function App() {
@@ -14,6 +17,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/admin-demo-dashboard" element={<AdminDemoDashboard />} />
+        <Route path="/dispatcher-demo-dashboard" element={<DispatcherDemoDashboard />} />
+        <Route path="/finance-demo-dashboard" element={<FinanceDemoDashboard />} />
         <Route
           path="/admin-dashboard"
           element={

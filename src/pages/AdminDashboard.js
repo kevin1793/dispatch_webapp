@@ -26,7 +26,7 @@ export default function AdminDashboard() {
   }, []);
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-zinc-900">
       <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
       <div className="flex-1 flex flex-col">
         <Navbar onToggleSidebar={toggleSidebar} />
@@ -49,7 +49,7 @@ export default function AdminDashboard() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div
-              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-50 transition"
+              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-150 transition"
               onClick={() => navigate("/admin/jobs?status=Created")}
             >
               <h2 className="text-lg font-semibold mb-2">New Jobs</h2>
@@ -57,7 +57,7 @@ export default function AdminDashboard() {
             </div>
 
             <div
-              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-50 transition"
+              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-150 transition"
               onClick={() => navigate("/admin/jobs?status=Active")}
             >
               <h2 className="text-lg font-semibold mb-2">Active Jobs</h2>
@@ -65,11 +65,34 @@ export default function AdminDashboard() {
             </div>
 
             <div
-              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-50 transition"
+              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-150 transition"
               onClick={() => navigate("/admin/jobs?status=Assigned")}
             >
               <h2 className="text-lg font-semibold mb-2">Assigned Jobs</h2>
               <p className="text-2xl font-bold">{assignedJobs}</p>
+            </div>
+
+            {/* Demo Dashboards */}
+            <div
+              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-150 transition"
+              onClick={() => navigate("/admin-demo-dashboard")}
+            >
+              <h2 className="text-lg font-semibold mb-2">Admin Demo Dashboard</h2>
+              <p className="text-2xl font-bold">Go</p>
+            </div>
+            <div
+              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-150 transition"
+              onClick={() => navigate("/dispatcher-demo-dashboard")}
+            >
+              <h2 className="text-lg font-semibold mb-2">Dispatcher Demo Dashboard</h2>
+              <p className="text-2xl font-bold">Go</p>
+            </div>
+            <div
+              className="bg-white rounded-lg shadow p-6 cursor-pointer hover:bg-gray-150 transition"
+              onClick={() => navigate("/finance-demo-dashboard")}
+            >
+              <h2 className="text-lg font-semibold mb-2">Finance Demo Dashboard</h2>
+              <p className="text-2xl font-bold">Go</p>
             </div>
           </div>
         </main>
